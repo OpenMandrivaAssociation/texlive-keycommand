@@ -1,3 +1,9 @@
+# revision 18042
+# category Package
+# catalog-ctan /macros/latex/contrib/keycommand
+# catalog-date 2010-04-27 09:59:23 +0200
+# catalog-license lppl
+# catalog-version 3.1415
 Name:		texlive-keycommand
 Version:	3.1415
 Release:	1
@@ -50,6 +56,7 @@ kvsetkeys by Heiko Oberdiek.
 %doc %{_texmfdistdir}/source/latex/keycommand/keycommand.drv
 %doc %{_texmfdistdir}/source/latex/keycommand/keycommand.dtx
 %doc %{_texmfdistdir}/source/latex/keycommand/keycommand.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ kvsetkeys by Heiko Oberdiek.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
