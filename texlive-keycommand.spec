@@ -6,7 +6,7 @@
 # catalog-version 3.1415
 Name:		texlive-keycommand
 Version:	3.1415
-Release:	2
+Release:	3
 Summary:	Simple creation of commands with key-value arguments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/keycommand
