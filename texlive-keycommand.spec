@@ -1,19 +1,13 @@
-# revision 18042
-# category Package
-# catalog-ctan /macros/latex/contrib/keycommand
-# catalog-date 2010-04-27 09:59:23 +0200
-# catalog-license lppl
-# catalog-version 3.1415
 Name:		texlive-keycommand
-Version:	3.1415
-Release:	12
+Version:	18042
+Release:	1
 Summary:	Simple creation of commands with key-value arguments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/keycommand
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ define commands with optional keys. The package provides
 kvsetkeys by Heiko Oberdiek.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -49,24 +43,11 @@ kvsetkeys by Heiko Oberdiek.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.1415-2
-+ Revision: 752983
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.1415-1
-+ Revision: 718772
-- texlive-keycommand
-- texlive-keycommand
-- texlive-keycommand
-- texlive-keycommand
-
