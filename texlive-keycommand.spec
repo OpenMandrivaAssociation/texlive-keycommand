@@ -1,6 +1,6 @@
 Name:		texlive-keycommand
 Version:	18042
-Release:	1
+Release:	2
 Summary:	Simple creation of commands with key-value arguments
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/keycommand
