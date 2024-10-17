@@ -3,7 +3,7 @@ Version:	18042
 Release:	2
 Summary:	Simple creation of commands with key-value arguments
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/keycommand
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/keycommand
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/keycommand.doc.r%{version}.tar.xz
